@@ -14,16 +14,17 @@ class SeriesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() {
-      if (staus.value == Status.loading) {
-        return const Center(child: CircularProgressIndicator());
-      }
-      if (seriesLs.isEmpty) {
-        return const Center(
-          child: Text('No data Found!'),
-        );
-      } else {
-        return GridView.builder(
+    return Obx(
+      () {
+        if (staus.value == Status.loading) {
+          return const Center(child: CircularProgressIndicator());
+        }
+        if (seriesLs.isEmpty) {
+          return const Center(
+            child: Text('No data Found!'),
+          );
+        } else {
+          return GridView.builder(
             itemCount: seriesLs.length,
             padding: const EdgeInsets.symmetric(
               horizontal: 16,
@@ -72,8 +73,10 @@ class SeriesList extends StatelessWidget {
                   ),
                 ),
               );
-            });
-      }
-    });
+            },
+          );
+        }
+      },
+    );
   }
 }
