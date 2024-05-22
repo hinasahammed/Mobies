@@ -13,7 +13,6 @@ class HomeController extends GetxController {
     requestStatus.value = status;
   }
 
-
   void getMoviesData() async {
     setRequestStatus(Status.loading);
 

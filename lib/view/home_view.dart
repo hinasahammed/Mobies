@@ -45,7 +45,7 @@ class _HomeViewState extends State<HomeView> {
           children: [
             MoviesList(
               moviesLs: homeController.movies,
-              staus: homeController.requestStatus,
+              status: homeController.requestStatus,
             ),
             SeriesList(
               staus: seriesController.requestStatus,

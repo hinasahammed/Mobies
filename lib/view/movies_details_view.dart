@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -76,7 +74,7 @@ class MoviesDetailsView extends StatelessWidget {
                         title,
                         style: theme.textTheme.titleLarge!.copyWith(
                           fontWeight: FontWeight.w500,
-                          color: theme.colorScheme.onBackground,
+                          color: theme.colorScheme.onSurface,
                         ),
                       ),
                       const Gap(10),
@@ -86,8 +84,8 @@ class MoviesDetailsView extends StatelessWidget {
                           Text(
                             year,
                             style: theme.textTheme.bodyLarge!.copyWith(
-                              color: theme.colorScheme.onBackground
-                                  .withOpacity(.5),
+                              color:
+                                  theme.colorScheme.onSurface.withOpacity(.5),
                             ),
                           ),
                           RatingBar.builder(
@@ -101,9 +99,7 @@ class MoviesDetailsView extends StatelessWidget {
                               Icons.star,
                               color: Colors.amber,
                             ),
-                            onRatingUpdate: (rating) {
-                              print(rating);
-                            },
+                            onRatingUpdate: (rating) {},
                           ),
                         ],
                       ),
@@ -113,8 +109,8 @@ class MoviesDetailsView extends StatelessWidget {
                             return Text(
                               '$e, ',
                               style: theme.textTheme.bodyLarge!.copyWith(
-                                color: theme.colorScheme.onBackground
-                                    .withOpacity(.5),
+                                color:
+                                    theme.colorScheme.onSurface.withOpacity(.5),
                               ),
                             );
                           })
@@ -124,7 +120,7 @@ class MoviesDetailsView extends StatelessWidget {
                       Text(
                         desc,
                         style: theme.textTheme.bodyLarge!.copyWith(
-                          color: theme.colorScheme.onBackground,
+                          color: theme.colorScheme.onSurface,
                         ),
                       ),
                     ],
